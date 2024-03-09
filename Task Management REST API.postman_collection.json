@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "af6f8d88-8cc8-4de0-bd5d-0b2ba53d56a3",
+		"name": "Task Management REST API",
+		"description": "This api perform crud operation on task to create, read, update and delete on task.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31100248"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/task/fetch_task",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"task",
+						"fetch_task"
+					]
+				},
+				"description": "the endpoint is used to fetch all task from memory\n\nit required to create some task before fetch it\n\n**Format of data comes in request :**\n\n``` json\n{\n\"id\": 232\n\"title\" : \"abc\",\n\"description\": \"some description\",\n\"created_at\" : \"09-03-2024\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Java\",\r\n    \"description\": \"Complete a java assignment before 12am\",\r\n    \"date\": \"09-03-2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/task/create_task",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"task",
+						"create_task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Python Project\",\r\n    \"description\": \"today is a python project we have\",\r\n    \"date\": \"02-03-2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/task/update_task/71",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"task",
+						"update_task",
+						"71"
+					]
+				},
+				"description": "This endpoint update task using task ID\n\nit required a _id_ in request parameter"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/task/delete_task/58",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"task",
+						"delete_task",
+						"58"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/task/fetch_task/64",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"task",
+						"fetch_task",
+						"64"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
